@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  name       String
+  email      String   @unique
+  password   String
+  role       UserRole @default(customer)
+  profileImg String
+  contactNo  String
+  address    String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  reviewRatings ReviewRating[]
+  orders        Order[]
+
+  @@map("users")
+}
+
+model Book {
+  id              String   @id @default(uuid())
+  title           String
+  genre           String
+  author          String
+  price           Int
+  publicationDate String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+
+  reviewRatings ReviewRating[]
+  orderedBooks  OrderedBook[]
+
+  @@map("books")
+}
+
+model Category {
+  id    String @id @default(uuid())
+  title String
+  books Book[]
+
+  @@map("categorys")
+}
+
+model Order {
+  id        String      @id @default(uuid())
+  status    OrderStatus @default(pending)
+  createdAt DateTime    @default(now())
+
+  userId       String
+  user         User          @relation(fields: [userId], references: [id])
+  orderedBooks OrderedBook[]
+
+  @@map("orders")
+}
+
+model ReviewRating {
+  id     String @id @default(uuid())
+  review String
+  rating String
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  bookId String
+  book   Book   @relation(fields: [bookId], references: [id])
+
+  @@map("review_rating")
+}
+
+model OrderedBook {
+  id       String @id @default(uuid())
+  quantity Int
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id])
+
+  bookId String
+  book   Book   @relation(fields: [bookId], references: [id])
+
+  @@map("ordered-books")
+}
+
+enum OrderStatus {
+  pending
+  shipped
+  delivered
+}
+
+enum UserRole {
+  admin
+  customer
+  super_admin
+}
