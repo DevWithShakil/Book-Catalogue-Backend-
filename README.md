@@ -13,30 +13,30 @@ https://assignment-08-teal.vercel.app
 - https://assignment-08-teal.vercel.app/api/v1/auth/signup (POST)
 - https://assignment-08-teal.vercel.app/api/v1/auth/signin (POST)
 - https://assignment-08-teal.vercel.app/api/v1/users (GET)
-- https://assignment-08-teal.vercel.app/api/v1/users/9d6260e6-7acb-4073-998e-df8da16f8959 (Single GET)
-- https://assignment-08-teal.vercel.app/api/v1/users/57396098-6277-4c8d-8258-f798b5def6ee (PATCH)
-- https://assignment-08-teal.vercel.app/api/v1/users/e411ff94-757f-4a97-a788-727dc220b5b1 (DELETE)
+- https://assignment-08-teal.vercel.app/api/v1/users/f82fdaa9-fb93-41ff-968e-2fd32a703ed3 (Single GET)
+- https://assignment-08-teal.vercel.app/api/v1/users/911e2cc9-3a42-45f5-b57c-a697fc5edb79 (PATCH)
+- https://assignment-08-teal.vercel.app/api/v1/users/ae935ab9-3e82-41b4-9378-3806f16ee79c (DELETE)
 - https://assignment-08-teal.vercel.app/api/v1/profile (GET)
 
 ### Categories
 
 - https://assignment-08-teal.vercel.app/api/v1/categories/create-category (POST)
 - https://assignment-08-teal.vercel.app/api/v1/categories (GET)
-- https://assignment-08-teal.vercel.app/api/v1/categories/fa474d9c-83f2-4d7a-a4af-26e039be1167 (Single GET)
-- https://assignment-08-teal.vercel.app/api/v1/categories/7556d03e-cb55-49be-95ea-7222b15f7282 (PATCH)
-- https://assignment-08-teal.vercel.app/api/v1/categories/d95a46d4-9958-4200-a384-9e21497b1788 (DELETE)
+- https://assignment-08-teal.vercel.app/api/v1/categories/bf912f78-1e03-4fc5-88b1-f7efd08cd532 (Single GET)
+- https://assignment-08-teal.vercel.app/api/v1/categories/37fdd923-cec8-4f41-9334-2df2f90cdfc4 (PATCH)
+- https://assignment-08-teal.vercel.app/api/v1/categories/0487bf94-33a8-45a7-8a1a-855bb79afbe4 (DELETE)
 
 ### Books
 
 - https://assignment-08-teal.vercel.app/api/v1/books/create-book (POST)
 - https://assignment-08-teal.vercel.app/api/v1/books (GET)
-- http://localhost:5000/api/v1/books/fa474d9c-83f2-4d7a-a4af-26e039be1167/category (GET)
-- https://assignment-08-teal.vercel.app/api/v1/books/e06be85a-cf9e-496e-831e-93acea58cda0 (GET)
-- https://assignment-08-teal.vercel.app/api/v1/books/7baba0a1-1c35-4af6-9c5e-6ad8050d648f (PATCH)
-- https://assignment-08-teal.vercel.app/api/v1/books/1017ff28-9c6f-49c5-95c8-ef5b6c782188 (DELETE)
+- https://assignment-08-teal.vercel.app/api/v1/books/bf912f78-1e03-4fc5-88b1-f7efd08cd532/category (GET)
+- https://assignment-08-teal.vercel.app/api/v1/books/075625dc-0728-440f-9bc9-bbeefc6e2791 (GET)
+- https://assignment-08-teal.vercel.app/api/v1/books/9f99cf98-349c-4b4d-a7bb-7c3d3dd20258 (PATCH)
+- https://assignment-08-teal.vercel.app/api/v1/books/6878c74b-230e-4ef5-8d40-ad2d28fb0245 (DELETE)
 
 ### Orders
 
 - https://assignment-08-teal.vercel.app/api/v1/orders/create-order (POST)
 - https://assignment-08-teal.vercel.app/api/v1/orders (GET)
-- https://assignment-08-teal.vercel.app/api/v1/orders/3b322e85-2c22-4675-93b5-d76fb01dd94f (GET)
+- https://assignment-08-teal.vercel.app/api/v1/orders/d45c34af-1a4d-4113-a13b-c715030b33f1 (GET)
